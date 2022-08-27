@@ -41,3 +41,4 @@ jobs:
               echo "testing"
               docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
               echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+              python manage.py runserver 0.0.0.0:8000
