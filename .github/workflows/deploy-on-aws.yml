@@ -30,7 +30,7 @@ jobs:
             uses: aws-actions/amazon-ecr-login@v1
           - name: Build, tag, and push image to Amazon ECR
             env:
-              ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+              ECR_REGISTRY: 695256878789.dkr.ecr.us-west-1.amazonaws.com/hello-world-django
               ECR_REPOSITORY: hello-world-django
               IMAGE_TAG: 1
             run: |
