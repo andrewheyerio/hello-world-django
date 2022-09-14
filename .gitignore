@@ -191,3 +191,6 @@ fabric.properties
 # A .env is required to make this project run. However, it should be specific to the developer.
 # Take a look at the file .env.dist to learn more.
 .env
+
+# Mac specific file that also isn't needed
+.DS_Store
