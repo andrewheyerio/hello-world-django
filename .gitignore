@@ -78,7 +78,7 @@ target/
 celerybeat-schedule
 
 # dotenv
-.env
+.env.dist
 
 # virtualenv
 venv/
@@ -185,3 +185,5 @@ fabric.properties
 .idea
 
 /.dbdata/
+
+.env.dist

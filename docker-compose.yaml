@@ -1,3 +1,14 @@
+# Notice the use of env variables by the use of variable subsitution like so
+# image: "postgres:${POSTGRES_VERSION}"
+# for example. This repo comes bootstrapped to run out of the box by running the command
+# docker-compose --env-file .env up
+# which will use the environment variables defined in .env in this docker-compose file
+# and some containers defined here with the use of the env_file: attribute.
+#
+# for helpful links that helped me create this solution of env variables see here;
+# https://docs.docker.com.xy2401.com/compose/compose-file/#variable-substitution
+# https://docs.docker.com.xy2401.com/compose/environment-variables/
+# https://mkyong.com/python/how-to-get-an-environment-variable-in-python/
 version: '3.9'
 services:
   backend:
@@ -6,12 +17,14 @@ services:
       - .:/app
     ports:
       - 8100:8000
+    env_file:
+      - .env
     depends_on:
       - db
       - redis
 
   db:
-    image: mysql:8.0.29
+    image: mysql:5.6.50
     restart: always
     environment:
       MYSQL_DATABASE: ambassador
