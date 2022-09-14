@@ -194,3 +194,13 @@ fabric.properties
 
 # Mac specific file that also isn't needed
 .DS_Store
+
+# had some issues of a file being stubborn and not getting ignore, link that helped me below
+# https://stackoverflow.com/questions/48072655/django-settings-cpython-36-pyc-not-ignored-by-gitignore
+*.log
+*.pot
+*.pyc
+*/*/*/__pycache__/
+*/*/__pycache__/
+*/__pycache__/
+
