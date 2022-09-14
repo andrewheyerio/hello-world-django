@@ -77,9 +77,6 @@ target/
 # celery beat schedule file
 celerybeat-schedule
 
-# dotenv
-.env.dist
-
 # virtualenv
 venv/
 ENV/
@@ -189,7 +186,7 @@ fabric.properties
 /.dbdata/
 
 # A .env is required to make this project run. However, it should be specific to the developer.
-# Take a look at the file .env.dist to learn more.
+# Take a look at the file .env.example to learn more.
 .env
 
 # Mac specific file that also isn't needed
@@ -203,4 +200,3 @@ fabric.properties
 */*/*/__pycache__/
 */*/__pycache__/
 */__pycache__/
-
