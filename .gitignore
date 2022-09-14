@@ -184,6 +184,10 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 .idea
 
+# dbdata folder is not needed either, this contains database files for development use as such,
+# it shouldn't be in the public repo
 /.dbdata/
 
-.env.dist
+# A .env is required to make this project run. However, it should be specific to the developer.
+# Take a look at the file .env.dist to learn more.
+.env
